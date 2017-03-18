@@ -1,4 +1,22 @@
 if (window.innerWidth < 500) {
+  var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var x = canvas.width / 2;
+      var y = canvas.height / 2 - 10;
+      var text = 'Owen Pheasey';
+
+      context.font = '50px Calibri';
+      context.textAlign = 'center';
+      context.fillStyle = 'black';
+      context.fillText(text, x, y);
+
+      // get text metrics
+      //var metrics = context.measureText(text);
+      //var width = metrics.width;
+      //context.font = '20pt Calibri';
+      //context.textAlign = 'center';
+      //context.fillStyle = '#555';
+      //context.fillText('(' + width + 'px wide)', x, y + 40);
    console.log('Screen is less than 500 pixels. Script deactivating')
 } else {
   function Vector(x, y, z) {
